@@ -5,11 +5,25 @@
       <mat-card-title>{{loan.title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        Applied Amount: {{findAppliedAmount(loan)}} <br>
-        Interest Rates: {{loan.interestRates}} <br>
-        Processing Fee: {{loan.processingFee}} <br>
-        Term Length: {{loan.termLength}} <br>
-    </mat-card-content>
+      <div class="row">
+        <div class="col-md-4" align="center">
+          <img src="{{loan.imageSrc}}" alt="" width="150px" >
+        </div>
+        <div class="col-md-4">
+          Applied Amount: <br>
+          Interest Rates: <br>
+          Term Length: <br>
+          Processing Fee: <br>
+        </div>
+        <div class="col-md-4">
+          {{findAppliedAmount(loan)}} <br>
+          {{loan.interestRates}} <br>
+          {{loan.termLength}} <br>
+          {{loan.processingFee}} <br>
+        </div>
+      </div>
+      
+  </mat-card-content>
     <mat-card-actions >
       <div class="text-center">
         <div *ngIf="checkAppStatus(loan) == 'Approved'" class="approved bg-success ">Application Approved</div>

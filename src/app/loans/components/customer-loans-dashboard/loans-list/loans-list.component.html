@@ -3,11 +3,26 @@
         <mat-card-title>{{loan.title}}</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-          Loan Amount: {{loan.loanAmount}} <br>
-          Interest Rates: {{loan.interestRates}} <br>
-          Min Credit Score: {{loan.minCreditScore}} <br>
-          Term Length: {{loan.termLength}} <br>
-          Processing Fee: {{loan.processingFee}} <br>
+          <div class="row">
+            <div class="col-md-4" align="center">
+              <img src="{{loan.imageSrc}}" alt="" width="150px" >
+            </div>
+            <div class="col-md-4">
+              Loan Amount: <br>
+              Interest Rates: <br>
+              Min Credit Score: <br>
+              Term Length: <br>
+              Processing Fee: <br>
+            </div>
+            <div class="col-md-4">
+              {{loan.loanAmount}} <br>
+              {{loan.interestRates}} <br>
+              {{loan.minCreditScore}} <br>
+              {{loan.termLength}} <br>
+              {{loan.processingFee}} <br>
+            </div>
+          </div>
+          
       </mat-card-content>
       <mat-card-actions >
         <div class="text-center">

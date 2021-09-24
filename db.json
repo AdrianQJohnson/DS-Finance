@@ -2,9 +2,9 @@
   "appList": [
     {
       "employer": "The Vanguard Group",
-      "salary": "123123",
-      "appliedAmount": 123123,
-      "creditScore": 123,
+      "salary": "1500",
+      "appliedAmount": 4000,
+      "creditScore": 720,
       "status": "Approved",
       "appliedDate": "09-24-2021",
       "termLength": "48 Months",
@@ -13,20 +13,6 @@
       "interestRate": 7.49,
       "loan": "Bank of America",
       "id": 1
-    },
-    {
-      "employer": "The Vanguard Group",
-      "salary": "321321",
-      "appliedAmount": 321321,
-      "creditScore": 321,
-      "status": "Pending",
-      "appliedDate": "09-24-2021",
-      "termLength": "60 Months",
-      "processingFee": "$150",
-      "applicant": "Adrian Customer",
-      "interestRate": 7.49,
-      "loan": "Chase",
-      "id": 2
     }
   ],
   "user": [
@@ -36,7 +22,7 @@
       "name": "Adrian Customer",
       "password": "abc12345",
       "role": "customer",
-      "appliedLoans": "Bank of America,Chase,"
+      "appliedLoans": "Bank of America,"
     },
     {
       "id": 2,
@@ -44,30 +30,6 @@
       "name": "Jake Manager",
       "password": "abc12345",
       "role": "manager"
-    },
-    {
-      "id": 3,
-      "email": "abcde@gmail.com",
-      "name": "Jill Customer",
-      "password": "abc12345",
-      "role": "customer",
-      "appliedLoans": ""
-    },
-    {
-      "name": "Adrian Johnson",
-      "email": "adrianqj12@gmail.com",
-      "password": "abc12345",
-      "role": "customer",
-      "id": 4,
-      "appliedLoans": ""
-    },
-    {
-      "name": "Kathryn Johnson",
-      "email": "gwebste7@uncc.edu",
-      "password": "abc12345",
-      "role": "customer",
-      "id": 7,
-      "appliedLoans": ""
     }
   ],
   "loanList": [
@@ -77,7 +39,8 @@
       "interestRates": "4.99% -15.69%",
       "minCreditScore": 660,
       "termLength": "48 Months",
-      "processingFee": "$100"
+      "processingFee": "$100",
+      "imageSrc": "../../../../../assets/images/boa-logo.png"
     },
     {
       "title": "Chase",
@@ -85,7 +48,8 @@
       "interestRates": "5.99% -18.69%",
       "minCreditScore": 680,
       "termLength": "60 Months",
-      "processingFee": "$150"
+      "processingFee": "$150",
+      "imageSrc": "../../../../../assets/images/chase-logo.png"
     },
     {
       "title": "State Farm",
@@ -93,7 +57,8 @@
       "interestRates": "6.99% -25.69%",
       "minCreditScore": 660,
       "termLength": "60 Months",
-      "processingFee": "$120"
+      "processingFee": "$120",
+      "imageSrc": "../../../../../assets/images/State-Farm-Logo.png"
     }
   ]
 }
