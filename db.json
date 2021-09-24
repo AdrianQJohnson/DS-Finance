@@ -1,0 +1,99 @@
+{
+  "appList": [
+    {
+      "employer": "The Vanguard Group",
+      "salary": "123123",
+      "appliedAmount": 123123,
+      "creditScore": 123,
+      "status": "Approved",
+      "appliedDate": "09-24-2021",
+      "termLength": "48 Months",
+      "processingFee": "$100",
+      "applicant": "Adrian Customer",
+      "interestRate": 7.49,
+      "loan": "Bank of America",
+      "id": 1
+    },
+    {
+      "employer": "The Vanguard Group",
+      "salary": "321321",
+      "appliedAmount": 321321,
+      "creditScore": 321,
+      "status": "Pending",
+      "appliedDate": "09-24-2021",
+      "termLength": "60 Months",
+      "processingFee": "$150",
+      "applicant": "Adrian Customer",
+      "interestRate": 7.49,
+      "loan": "Chase",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "email": "abc@gmail.com",
+      "name": "Adrian Customer",
+      "password": "abc12345",
+      "role": "customer",
+      "appliedLoans": "Bank of America,Chase,"
+    },
+    {
+      "id": 2,
+      "email": "abcd@gmail.com",
+      "name": "Jake Manager",
+      "password": "abc12345",
+      "role": "manager"
+    },
+    {
+      "id": 3,
+      "email": "abcde@gmail.com",
+      "name": "Jill Customer",
+      "password": "abc12345",
+      "role": "customer",
+      "appliedLoans": ""
+    },
+    {
+      "name": "Adrian Johnson",
+      "email": "adrianqj12@gmail.com",
+      "password": "abc12345",
+      "role": "customer",
+      "id": 4,
+      "appliedLoans": ""
+    },
+    {
+      "name": "Kathryn Johnson",
+      "email": "gwebste7@uncc.edu",
+      "password": "abc12345",
+      "role": "customer",
+      "id": 7,
+      "appliedLoans": ""
+    }
+  ],
+  "loanList": [
+    {
+      "title": "Bank of America",
+      "loanAmount": "$5,000-$100,000",
+      "interestRates": "4.99% -15.69%",
+      "minCreditScore": 660,
+      "termLength": "48 Months",
+      "processingFee": "$100"
+    },
+    {
+      "title": "Chase",
+      "loanAmount": "$4,000-$50,000",
+      "interestRates": "5.99% -18.69%",
+      "minCreditScore": 680,
+      "termLength": "60 Months",
+      "processingFee": "$150"
+    },
+    {
+      "title": "State Farm",
+      "loanAmount": "$3,500-$40,000",
+      "interestRates": "6.99% -25.69%",
+      "minCreditScore": 660,
+      "termLength": "60 Months",
+      "processingFee": "$120"
+    }
+  ]
+}

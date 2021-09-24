@@ -1,0 +1,58 @@
+<div class="background">
+    <div class="container"><label for="">&nbsp;</label></div>
+    <div class="container form-box">
+        <h1>Thank you for Choosing DS Fianance!</h1>
+        
+        <form #signupForm="ngForm" (submit)="onSubmit(signupForm)">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                      <input type="text" required ngModel #name="ngModel" class="form-control" name="name" placeholder="Name">               
+                      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+
+                        <div *ngIf="name.errors?.required" class="text-danger">
+                            Name is required.
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                      <input type="email" required ngModel #email="ngModel" class="form-control" name="email" placeholder="Email">               
+                                  
+                      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
+
+                        <div *ngIf="email.errors?.required" class="text-danger">
+                            Email is required.
+                        </div>
+                        </div>  
+                   </div>
+                  
+                </div>
+                <div class="row mt-4">
+                   <div class="col-md-12">
+                       <input  type="password" required ngModel #password="ngModel" class="form-control" name="password" placeholder="Password" > 
+
+                       <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert">
+
+                        <div *ngIf="password.errors?.required" class="text-danger">
+                            Password is required.
+                        </div>
+                        </div>  
+                   </div>
+               </div>
+               
+               <input type="hidden" ngModel #role="ngModel" class="form-control" name="role" value="customer">
+               <input type="hidden" ngModel #role="ngModel" class="form-control" name="appliedLoans" value="">
+
+               <div class="row mt-4">
+                   <div class="col-md-12">
+                       <input type="submit" [disabled]="!signupForm.valid" value="Sign Up" class="btn btn-warning">
+                   </div>
+               </div>
+           
+            </div>
+           </form>
+    </div>
+    
+</div>

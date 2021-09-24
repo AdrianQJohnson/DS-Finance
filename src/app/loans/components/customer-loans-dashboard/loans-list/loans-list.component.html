@@ -1,0 +1,18 @@
+<mat-card *ngFor="let loan of loanList; let i = index;">
+      <mat-card-header>
+        <mat-card-title>{{loan.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          Loan Amount: {{loan.loanAmount}} <br>
+          Interest Rates: {{loan.interestRates}} <br>
+          Min Credit Score: {{loan.minCreditScore}} <br>
+          Term Length: {{loan.termLength}} <br>
+          Processing Fee: {{loan.processingFee}} <br>
+      </mat-card-content>
+      <mat-card-actions >
+        <div class="text-center">
+          <button mat-raised-button class="color" (click)="applyNow(loan)">Apply Now</button>
+        </div>
+        
+      </mat-card-actions>
+    </mat-card>

@@ -1,0 +1,38 @@
+<mat-card *ngFor="let app of appList; let i = index;">
+    <mat-card-content>
+        <div class="row">
+            <div class="col-sm-6">
+                Applicant: {{app.applicant}} <br>
+                Gender: {{app.gender}} <br>
+                Age: {{app.age}} <br>
+                Salary: {{app.salary}} <br>
+                Credit Score: {{app.creditScore}} <br>
+            </div>
+            <div class="col-sm-6">
+                Applied Amount: {{app.appliedAmount}} <br>
+                Interest Rates: {{app.interestRates}} <br>
+                Processing Fee: {{app.processingFee}} <br>
+                Term Length: {{app.termLength}} <br>
+            </div>
+        </div>
+        
+    </mat-card-content>
+    <mat-card-actions >
+        <div class="text-center" >
+            <div *ngIf="app.status == 'Pending'" class="">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-success" style="width: 200px;" (click)="approve(app)">Approve</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-danger" style="width: 200px;" (click)="reject(app)">Reject</button>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="app.status == 'Approved'" class="approved bg-success ">Application Approved</div>
+            <div *ngIf="app.status == 'Rejected'" class="denied bg-danger ">Application Rejected</div>
+        </div>
+      
+    </mat-card-actions>
+  </mat-card>

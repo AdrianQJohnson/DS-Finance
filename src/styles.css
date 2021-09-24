@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: #3e3e3e; 
+    color:white;
+}
+
+.align-right {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+mat-toolbar, .color {
+    background-color: #3e3e3e;
+    color: white;
+
+}
+
+mat-tab-group, .mat-tab-label {
+    background-color: #3e3e3e;
+    color: white;
+}
+
+.footer {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #3e3e3e;
+}
+
+mat-card {
+    width: 50%;
+    margin: 20px auto 20px auto;
+}
+
+mat-tab-body .mat-tab-body-content {
+    /* background-image: url(assets/images/etienne-martin-2_K82gx9Uk8-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    min-height: 700px;
+    background-color: #6f6f6f;
+}
+
+.background {
+    background-image: url(assets/images/etienne-martin-2_K82gx9Uk8-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70%;
+}
+
+.form-box {
+    border: 1px solid black; 
+    background-color: rgba(255, 255, 255, .8);
+    color: black;
+    padding-top: 200px;
+    padding: 10px; 
+    border-radius: 4px;
+}
+
+.approved {
+    color:white;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px 0;
+}
+
+.denied {
+    color:white;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px 0;
+}

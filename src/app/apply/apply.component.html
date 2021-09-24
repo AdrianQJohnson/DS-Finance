@@ -1,0 +1,92 @@
+<!-- Get Employer -->
+<!-- Get Salary -->
+<!-- Get Loan amount -->
+<!-- Calc rate -->
+<!-- Submit -->
+<!-- Update appliedLoans -->
+<!-- Route to appliedLoans -->
+
+<div class="background">
+    <div class="container"><label for="">&nbsp;</label></div>
+    <div class="container form-box">
+        <h1>Hi, {{loginUser}}!</h1>
+        <h2>Welcome to DS Finance 3-step loan application system!</h2>
+        
+        <form #applyForm="ngForm" (submit)="onSubmit(applyForm)">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-md-12">
+
+                      <input type="text" ngModel  #employer="ngModel" required name="employer" placeholder="Current Emplyer">               
+                      <div *ngIf="employer.invalid && (employer.dirty || employer.touched)" class="alert">
+
+                        <div *ngIf="employer.errors?.required" class="text-danger">
+                            Current Employer is required.
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                      <input type="text" required ngModel #salary="ngModel" class="form-control" name="salary" placeholder="Monthly Salary">               
+                                  
+                      <div *ngIf="salary.invalid && (salary.dirty || salary.touched)" class="alert">
+
+                        <div *ngIf="salary.errors?.required" class="text-danger">
+                            Monthly Salary is required.
+                        </div>
+                        </div>  
+                   </div>
+                  
+                </div>
+                <div class="row mt-4">
+                   <div class="col-md-12">
+                       <input  type="number" required ngModel #appliedAmount="ngModel" class="form-control" name="appliedAmount" placeholder="Application Amount (e.g. 4000)" > 
+
+                       <div *ngIf="appliedAmount.invalid && (appliedAmount.dirty || appliedAmount.touched)" class="alert">
+
+                        <div *ngIf="appliedAmount.errors?.required" class="text-danger">
+                            Application Amount is required.
+                        </div>
+                        </div>  
+                   </div>
+               </div>
+
+               <div class="row mt-4">
+                <div class="col-md-12">
+                    <input  type="number" required ngModel #creditScore="ngModel" class="form-control" name="creditScore" placeholder="Credit Score (e.g. 720)" > 
+
+                    <div *ngIf="creditScore.invalid && (creditScore.dirty || creditScore.touched)" class="alert">
+
+                     <div *ngIf="creditScore.errors?.required" class="text-danger">
+                         Credit Score is required.
+                     </div>
+                     </div>  
+                </div>
+            </div>
+
+               <div class="row mt-4">
+                <div class="col-md-12">
+                    <input  type="number" required disabled ngModel #interestRate="ngModel" class="form-control" name="interestRate" value="" > 
+ 
+                </div>
+                </div>
+
+                <input type="hidden" ngModel #applicant="ngModel" class="form-control" name="applicant" value="{{user.name}}">
+                <input type="hidden" ngModel #status="ngModel" class="form-control" name="status" value="">
+                <input type="hidden" ngModel #appliedDate="ngModel" class="form-control" name="appliedDate" >
+                <input  type="hidden" required disabled ngModel #termLength="ngModel" class="form-control" name="termLength" value="" > 
+                <input  type="hidden" required disabled ngModel #processingFee="ngModel" class="form-control" name="processingFee" value="" > 
+                
+
+               <div class="row mt-4">
+                   <div class="col-md-12">
+                       <input type="submit" [disabled]="!applyForm.valid" value="Apply Now" class="btn btn-warning">
+                   </div>
+               </div>
+           
+            </div>
+           </form>
+    </div>
+    
+</div>

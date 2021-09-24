@@ -1,0 +1,26 @@
+<mat-toolbar class="color">
+    <mat-toolbar-row>
+        <span [routerLink]="['home']">
+            <img src="favicon.ico" alt="">&nbsp;&nbsp;
+        </span>
+        <span [routerLink]="['home']">
+            <h1>DS Finance</h1>
+        </span>
+
+        <span class="align-right" >
+            <button *ngIf="!_http.isLoggedIn()" mat-raised-button class="color" [routerLink]="['login']" >Login</button>&nbsp;&nbsp;
+            <button *ngIf="!_http.isLoggedIn()" mat-raised-button class="color" [routerLink]="['signup']">Signup</button>
+            
+            <span style="float:left">
+                <p style="font-size:small; padding-top:2px" *ngIf="_http.isLoggedIn()">Hello, {{loginUser}}!&nbsp;&nbsp;&nbsp;{{ (currentDate) | date:'medium':locale }}</p>
+                
+            </span>
+            <span>
+                <button *ngIf="_http.isLoggedIn()" mat-raised-button class="color" (click)="_http.logOut()" >Sign Out</button>
+            </span>
+        </span>
+       
+        
+        
+    </mat-toolbar-row>
+  </mat-toolbar>

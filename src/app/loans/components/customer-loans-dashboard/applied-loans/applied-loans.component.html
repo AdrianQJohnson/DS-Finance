@@ -1,0 +1,21 @@
+
+<div *ngFor="let loan of appliedLoanList; let i = index;">
+  <mat-card *ngIf="user['appliedLoans'].includes(loan.title)">
+    <mat-card-header>
+      <mat-card-title>{{loan.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        Applied Amount: {{findAppliedAmount(loan)}} <br>
+        Interest Rates: {{loan.interestRates}} <br>
+        Processing Fee: {{loan.processingFee}} <br>
+        Term Length: {{loan.termLength}} <br>
+    </mat-card-content>
+    <mat-card-actions >
+      <div class="text-center">
+        <div *ngIf="checkAppStatus(loan) == 'Approved'" class="approved bg-success ">Application Approved</div>
+        <div *ngIf="checkAppStatus(loan) == 'Rejected'" class="denied bg-danger ">Application Rejected</div>
+        <div *ngIf="checkAppStatus(loan) == 'Pending'" class="">Application Pending...</div>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

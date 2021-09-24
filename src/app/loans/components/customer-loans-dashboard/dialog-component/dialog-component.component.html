@@ -1,0 +1,84 @@
+<mat-dialog-content>
+    <h1>Hi, {{loginUser}}!</h1>
+        <h2>Welcome to DS Finance's loan application system!</h2>
+        
+        <form #applyForm="ngForm" (submit)="onSubmit(applyForm)">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-md-12">
+
+                      <input type="text" required ngModel  #employer="ngModel" class="form-control" name="employer" placeholder="Current Employer">               
+                      <div *ngIf="employer.invalid && (employer.dirty || employer.touched)" class="alert">
+
+                        <div *ngIf="employer.errors?.required" class="text-danger">
+                            Current Employer is required.
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                      <input type="text" required ngModel #salary="ngModel" class="form-control" name="salary" placeholder="Monthly Salary (e.g. 1500/Mon)">               
+                                  
+                      <div *ngIf="salary.invalid && (salary.dirty || salary.touched)" class="alert">
+
+                        <div *ngIf="salary.errors?.required" class="text-danger">
+                            Monthly Salary is required.
+                        </div>
+                        </div>  
+                   </div>
+                  
+                </div>
+                <div class="row mt-4">
+                   <div class="col-md-12">
+                       <input  type="number" required ngModel #appliedAmount="ngModel" class="form-control" name="appliedAmount" placeholder="Application Amount (e.g. 4000)" > 
+
+                       <div *ngIf="appliedAmount.invalid && (appliedAmount.dirty || appliedAmount.touched)" class="alert">
+
+                        <div *ngIf="appliedAmount.errors?.required" class="text-danger">
+                            Application Amount is required.
+                        </div>
+                        </div>  
+                   </div>
+               </div>
+
+               <div class="row mt-4">
+                <div class="col-md-12">
+                    <input  type="number" required ngModel #creditScore="ngModel" class="form-control" name="creditScore" placeholder="Credit Score (e.g. 720)" > 
+
+                    <div *ngIf="creditScore.invalid && (creditScore.dirty || creditScore.touched)" class="alert">
+
+                     <div *ngIf="creditScore.errors?.required" class="text-danger">
+                         Credit Score is required.
+                     </div>
+                     </div>  
+                </div>
+            </div>
+
+               <div class="row mt-4">
+                <div class="col-md-12">
+                    <label for="interestRate">Your Calculated Interest Rate:</label>
+                    <input  type="number" required disabled ngModel #interestRate="ngModel" class="form-control" name="interestRate" value=7.49 placeholder=7.49> 
+ 
+                </div>
+                </div>
+
+                <!-- <input type="hidden" ngModel #applicant="ngModel" class="form-control" name="applicant" value="{{user['name']}}"> -->
+                <input type="hidden" ngModel #status="ngModel" class="form-control" name="status" value="">
+                <input type="hidden" ngModel #appliedDate="ngModel" class="form-control" name="appliedDate" >
+                <input  type="hidden"   ngModel #termLength="ngModel" class="form-control" name="termLength"  > 
+                <input  type="hidden"   ngModel #processingFee="ngModel" class="form-control" name="processingFee" > 
+                
+
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <input type="submit" [mat-dialog-close]=true [disabled]="!applyForm.valid" value="Apply Now" class="btn btn-warning">
+                    </div>
+                    </div>
+           
+            </div>
+           </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    
+</mat-dialog-actions>
